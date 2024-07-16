@@ -1,0 +1,15 @@
+:root {
+  --color-secondary: #666eff;
+  --color-primary: #ffcc00;
+  --color-red: #ff3700;
+  --color-dark: #110e00;
+  --md-radius: 12px;
+  --lg-radius: 16px;
+  --sm-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
