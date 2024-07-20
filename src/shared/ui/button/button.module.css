@@ -1,22 +1,39 @@
 .button {
-  padding: 12px 18px;
-  border-radius: var(--md-radius);
   border: none;
-  font-size: medium;
   cursor: pointer;
-  transition: all 0.1s ease-in;
-}
-
-.button:hover {
+  transition: all ease 250ms;
   background-color: var(--color-dark);
   color: white;
 }
 
-.primary {
-  background-color: var(--color-primary);
+.button:active {
+  scale: 0.95;
 }
 
-.secondary {
+.primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.secondary:hover {
   background-color: var(--color-secondary);
   color: white;
+}
+
+.md {
+  font-size: medium;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.lg {
+  font-size: large;
+  padding: 1rem 1.25rem;
+  border-radius: 1.75rem;
+}
+
+.sm {
+  padding: 0.5rem 0.75rem;
+  border-radius: 1.25rem;
+  font-size: small;
 }

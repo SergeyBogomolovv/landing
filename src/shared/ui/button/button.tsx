@@ -1,16 +1,31 @@
-"use client";
+import React from "react";
 import styles from "./button.module.css";
-import { ButtonColors } from "./types";
+import { ButtonColors, ButtonSizes } from "./types";
+import { clsx } from "clsx";
 
-interface Props {
-  children: React.ReactNode;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonColors;
+  size?: ButtonSizes;
 }
 
-export const Button = ({ variant = "primary", children }: Props) => {
-  return (
-    <button className={`${styles.button} ${styles[variant]}`}>
-      {children}
-    </button>
-  );
-};
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "primary", size = "md", ...props }, ref) => {
+    return (
+      <button
+        className={clsx(
+          className,
+          styles[variant],
+          styles[size],
+          styles.button,
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
+
+Button.displayName = "Button";
+
+export { Button };

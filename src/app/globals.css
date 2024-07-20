@@ -3,13 +3,29 @@
   --color-primary: #ffcc00;
   --color-red: #ff3700;
   --color-dark: #110e00;
-  --md-radius: 12px;
-  --lg-radius: 16px;
-  --sm-radius: 8px;
+  --color-foreground: #828282;
+  --size-md: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2rem;
+  --size-2xl: 3rem;
+  --size-sm: 0.5rem;
+  --radius-full: 9999px;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.main-layout {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  max-width: 90%;
 }
