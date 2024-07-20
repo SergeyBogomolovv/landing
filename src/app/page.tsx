@@ -4,6 +4,7 @@ import FriendsSection from "@/widgets/friends-section";
 import TasksSection from "@/widgets/tasks-section";
 import { Slider } from "@/shared/ui/slider";
 import AwaitsList from "@/widgets/awaits-list";
+import Faq from "@/widgets/faq";
 
 const images = [
   { src: "/yandex.png", alt: "slider image 2" },
@@ -18,6 +19,7 @@ export default function Home() {
       <TasksSection />
       <AwaitsList />
       <FriendsSection />
+      <Faq />
     </main>
   );
 }
