@@ -4,12 +4,16 @@
   border-radius: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .heading {
@@ -34,11 +38,21 @@
   height: 25px;
 }
 
-.button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-dark);
-}
-
 .content {
   color: var(--color-foreground);
+}
+
+@media (width < 724px) {
+  .heading {
+    font-size: 1rem;
+  }
+  .button {
+    width: 25px;
+    height: 25px;
+    aspect-ratio: 1 / 1;
+  }
+  .button svg {
+    width: 15px;
+    height: 15px;
+  }
 }

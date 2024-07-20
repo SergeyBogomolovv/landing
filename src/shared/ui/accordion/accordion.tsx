@@ -14,8 +14,8 @@ export const Accordion = ({ title, content }: Props) => {
   const [isOpen, setOpen] = useState(false);
 
   const variants: Variants = {
-    open: { opacity: 1, height: "auto", marginTop: "3rem" },
-    closed: { opacity: 0, height: 0, marginTop: 0 },
+    open: { opacity: 1, display: "initial" },
+    closed: { opacity: 0, display: "none" },
   };
 
   const iconVariants = {
@@ -36,6 +36,7 @@ export const Accordion = ({ title, content }: Props) => {
           <TiArrowSortedDown />
         </motion.div>
       </div>
+
       <motion.div
         className={clsx(styles.content, isOpen && styles.open)}
         animate={isOpen ? "open" : "closed"}
