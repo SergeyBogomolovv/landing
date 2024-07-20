@@ -7,12 +7,11 @@ import {
   SectionTitle,
 } from "@/shared/ui/section";
 
-export const HeroSection = () => {
+const TasksSection = () => {
   return (
     <Section>
-      <SectionImage src="/undraw_coffee_time_e8cw.svg" />
       <SectionContent>
-        <SectionTitle>Присоединяйтесь к стажировкам в Яндекс</SectionTitle>
+        <SectionTitle>Будете решать интересные задачи</SectionTitle>
         <SectionDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
           provident doloribus molestias excepturi? Odit, culpa modi fuga aperiam
@@ -21,6 +20,9 @@ export const HeroSection = () => {
         </SectionDescription>
         <SectionButton>Хочу в Яндекс</SectionButton>
       </SectionContent>
+      <SectionImage src="/undraw_learning_re_32qv.svg" />
     </Section>
   );
 };
+
+export default TasksSection;

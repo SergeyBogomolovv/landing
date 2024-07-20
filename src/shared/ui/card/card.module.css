@@ -1,0 +1,24 @@
+.card {
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background-color: var(--color-gray);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+
+.image {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.description {
+  color: rgb(89, 89, 89);
+  width: 60%;
+}
+
+.heading {
+  font-weight: 500;
+}

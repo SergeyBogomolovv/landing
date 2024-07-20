@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -53,4 +53,16 @@
 .nav li.active {
   opacity: 1;
   width: 1rem;
+}
+
+@media (width < 1024px) {
+  .slider {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (width < 724px) {
+  .slider {
+    aspect-ratio: 2 / 3;
+  }
 }

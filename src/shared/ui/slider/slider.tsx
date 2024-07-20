@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./slider.module.css";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   images: { src: string; alt: string }[];

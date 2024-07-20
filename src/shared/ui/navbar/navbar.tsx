@@ -13,7 +13,7 @@ import Image from "next/image";
 import { CgClose } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
 import { useParams, usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface NavbarProps extends HTMLAttributes<HTMLDivElement> {
   setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -74,7 +74,7 @@ export const NavbarMobile = ({
   children,
   className,
 }: NavbarMobileProps) => {
-  const variants = {
+  const variants: Variants = {
     closed: { opacity: 0, display: "none" },
     open: { opacity: 1, display: "flex" },
   };
@@ -82,6 +82,7 @@ export const NavbarMobile = ({
     <motion.nav
       variants={variants}
       animate={isOpen ? "open" : "closed"}
+      initial={{ display: "none" }}
       transition={{ duration: 0.2 }}
       className={clsx(
         className,
